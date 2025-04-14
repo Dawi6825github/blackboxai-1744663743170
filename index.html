@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dawit | Portfolio</title>
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1A202C',
+                        accent: '#34D399',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-primary text-gray-100 font-sans">
+    <!-- Header Partial -->
+    <div id="header-placeholder"></div>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+    </script>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="min-h-[90vh] bg-[url('https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg')] bg-cover bg-center flex items-center">
+            <div class="container mx-auto px-6">
+                <div class="max-w-md bg-primary/90 p-8 rounded-lg backdrop-blur-sm">
+                    <h1 class="text-4xl font-bold mb-4">Hi, I'm Dawit</h1>
+                    <p class="text-xl mb-6">Full Stack Developer & UI Designer</p>
+                    <a href="contact.html" class="bg-accent text-primary px-6 py-3 rounded-md font-medium hover:bg-accent/90 transition">Get In Touch</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Work -->
+        <section class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold mb-12 text-center">Featured Work</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="portfolio-item bg-gray-800 rounded-lg overflow-hidden hover:shadow-lg transition">
+                        <img src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg" alt="Project 1" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">E-commerce Platform</h3>
+                            <p class="text-gray-400 mb-4">React, Node.js, MongoDB</p>
+                            <a href="portfolio.html" class="text-accent hover:underline">View Project →</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-item bg-gray-800 rounded-lg overflow-hidden hover:shadow-lg transition">
+                        <img src="https://images.pexels.com/photos/39284/macbook-apple-imac-computer-39284.jpeg" alt="Project 2" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Dashboard UI</h3>
+                            <p class="text-gray-400 mb-4">React, Tailwind CSS</p>
+                            <a href="portfolio.html" class="text-accent hover:underline">View Project →</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-item bg-gray-800 rounded-lg overflow-hidden hover:shadow-lg transition">
+                        <img src="https://images.pexels.com/photos/1092644/pexels-photo-1092644.jpeg" alt="Project 3" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Mobile App</h3>
+                            <p class="text-gray-400 mb-4">React Native, Firebase</p>
+                            <a href="portfolio.html" class="text-accent hover:underline">View Project →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-12">
+                    <a href="portfolio.html" class="inline-block border border-accent text-accent px-6 py-3 rounded-md hover:bg-accent hover:text-primary transition">View All Projects</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold mb-12 text-center">What Clients Say</h2>
+                <div class="max-w-4xl mx-auto">
+                    <div class="bg-gray-800 p-8 rounded-lg">
+                        <p class="text-xl italic mb-6">"Dawit delivered exceptional work on our web application. His attention to detail and problem-solving skills are outstanding."</p>
+                        <div class="flex items-center">
+                            <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg" alt="Client" class="w-12 h-12 rounded-full mr-4 object-cover">
+                            <div>
+                                <h4 class="font-semibold">John Smith</h4>
+                                <p class="text-gray-400">CEO, TechCorp</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Partial -->
+    <div id="footer-placeholder"></div>
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
