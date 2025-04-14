@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Work | Dawit</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1A202C',
+                        accent: '#34D399',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-primary text-gray-100 font-sans">
+    <!-- Header Partial -->
+    <div id="header-placeholder"></div>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+    </script>
+
+    <main class="pt-20 pb-12">
+        <section class="py-12">
+            <div class="container mx-auto px-6">
+                <h1 class="text-4xl font-bold mb-8">My Portfolio</h1>
+                
+                <!-- Filter Buttons -->
+                <div class="flex flex-wrap gap-4 mb-8">
+                    <button class="portfolio-filter bg-accent text-primary px-4 py-2 rounded-md" data-filter="all">All Projects</button>
+                    <button class="portfolio-filter bg-gray-700 hover:bg-gray-600 px-4 py-2 rounded-md transition" data-filter="web">Web Development</button>
+                    <button class="portfolio-filter bg-gray-700 hover:bg-gray-600 px-4 py-2 rounded-md transition" data-filter="mobile">Mobile Apps</button>
+                    <button class="portfolio-filter bg-gray-700 hover:bg-gray-600 px-4 py-2 rounded-md transition" data-filter="design">UI/UX Design</button>
+                </div>
+
+                <!-- Project Grid -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project 1 -->
+                    <div class="portfolio-item bg-gray-800 rounded-lg overflow-hidden hover:shadow-lg transition" data-category="web">
+                        <img src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg" alt="E-commerce Platform" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">E-commerce Platform</h3>
+                            <p class="text-gray-400 mb-4">React, Node.js, MongoDB</p>
+                            <p class="mb-4">Full-featured online store with payment integration and admin dashboard.</p>
+                            <a href="#" class="text-accent hover:underline">View Case Study →</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="portfolio-item bg-gray-800 rounded-lg overflow-hidden hover:shadow-lg transition" data-category="mobile">
+                        <img src="https://images.pexels.com/photos/1092644/pexels-photo-1092644.jpeg" alt="Fitness Tracker App" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Fitness Tracker App</h3>
+                            <p class="text-gray-400 mb-4">React Native, Firebase</p>
+                            <p class="mb-4">Cross-platform mobile application for workout tracking and progress analytics.</p>
+                            <a href="#" class="text-accent hover:underline">View Case Study →</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="portfolio-item bg-gray-800 rounded-lg overflow-hidden hover:shadow-lg transition" data-category="design">
+                        <img src="https://images.pexels.com/photos/39284/macbook-apple-imac-computer-39284.jpeg" alt="Dashboard UI" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Analytics Dashboard</h3>
+                            <p class="text-gray-400 mb-4">Figma, Tailwind CSS</p>
+                            <p class="mb-4">Data visualization dashboard with interactive charts and KPI metrics.</p>
+                            <a href="#" class="text-accent hover:underline">View Case Study →</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="portfolio-item bg-gray-800 rounded-lg overflow-hidden hover:shadow-lg transition" data-category="web">
+                        <img src="https://images.pexels.com/photos/270637/pexels-photo-270637.jpeg" alt="CMS Platform" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Content Management System</h3>
+                            <p class="text-gray-400 mb-4">Vue.js, Laravel</p>
+                            <p class="mb-4">Custom CMS for publishing and managing digital content.</p>
+                            <a href="#" class="text-accent hover:underline">View Case Study →</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="portfolio-item bg-gray-800 rounded-lg overflow-hidden hover:shadow-lg transition" data-category="mobile">
+                        <img src="https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg" alt="Social App" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Social Networking App</h3>
+                            <p class="text-gray-400 mb-4">Flutter, Firebase</p>
+                            <p class="mb-4">Community platform with real-time messaging and content sharing.</p>
+                            <a href="#" class="text-accent hover:underline">View Case Study →</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 6 -->
+                    <div class="portfolio-item bg-gray-800 rounded-lg overflow-hidden hover:shadow-lg transition" data-category="design">
+                        <img src="https://images.pexels.com/photos/1148820/pexels-photo-1148820.jpeg" alt="Brand Identity" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Brand Identity System</h3>
+                            <p class="text-gray-400 mb-4">Adobe Creative Suite</p>
+                            <p class="mb-4">Complete visual identity including logo, typography and brand guidelines.</p>
+                            <a href="#" class="text-accent hover:underline">View Case Study →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Partial -->
+    <div id="footer-placeholder"></div>
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
