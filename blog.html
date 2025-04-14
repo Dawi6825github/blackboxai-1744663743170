@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Dawit</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1A202C',
+                        accent: '#34D399',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-primary text-gray-100 font-sans">
+    <!-- Header Partial -->
+    <div id="header-placeholder"></div>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+    </script>
+
+    <main class="pt-20 pb-12">
+        <!-- Blog Header -->
+        <section class="py-12 bg-gray-900">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl font-bold mb-4">My Blog</h1>
+                <p class="text-xl text-gray-400 max-w-2xl mx-auto">Thoughts on web development, design, and technology</p>
+            </div>
+        </section>
+
+        <!-- Blog Posts -->
+        <section class="py-12">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Post 1 -->
+                    <article class="bg-gray-800 rounded-lg overflow-hidden hover:shadow-lg transition">
+                        <img src="https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg" alt="React Hooks" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-center text-sm text-gray-400 mb-3">
+                                <span>April 15, 2025</span>
+                                <span class="mx-2">•</span>
+                                <span>5 min read</span>
+                            </div>
+                            <h2 class="text-xl font-bold mb-3">Mastering React Hooks</h2>
+                            <p class="text-gray-400 mb-4">Learn how to effectively use React Hooks to simplify your components and manage state.</p>
+                            <a href="#" class="text-accent hover:underline">Read More →</a>
+                        </div>
+                    </article>
+
+                    <!-- Post 2 -->
+                    <article class="bg-gray-800 rounded-lg overflow-hidden hover:shadow-lg transition">
+                        <img src="https://images.pexels.com/photos/1181673/pexels-photo-1181673.jpeg" alt="Tailwind CSS" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-center text-sm text-gray-400 mb-3">
+                                <span>March 28, 2025</span>
+                                <span class="mx-2">•</span>
+                                <span>4 min read</span>
+                            </div>
+                            <h2 class="text-xl font-bold mb-3">Tailwind CSS Best Practices</h2>
+                            <p class="text-gray-400 mb-4">Discover how to structure your Tailwind CSS projects for maintainability and scalability.</p>
+                            <a href="#" class="text-accent hover:underline">Read More →</a>
+                        </div>
+                    </article>
+
+                    <!-- Post 3 -->
+                    <article class="bg-gray-800 rounded-lg overflow-hidden hover:shadow-lg transition">
+                        <img src="https://images.pexels.com/photos/11035371/pexels-photo-11035371.jpeg" alt="Performance" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-center text-sm text-gray-400 mb-3">
+                                <span>March 10, 2025</span>
+                                <span class="mx-2">•</span>
+                                <span>7 min read</span>
+                            </div>
+                            <h2 class="text-xl font-bold mb-3">Web Performance Optimization</h2>
+                            <p class="text-gray-400 mb-4">Essential techniques to improve your website's loading speed and user experience.</p>
+                            <a href="#" class="text-accent hover:underline">Read More →</a>
+                        </div>
+                    </article>
+
+                    <!-- Post 4 -->
+                    <article class="bg-gray-800 rounded-lg overflow-hidden hover:shadow-lg transition">
+                        <img src="https://images.pexels.com/photos/1181275/pexels-photo-1181275.jpeg" alt="UI Design" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-center text-sm text-gray-400 mb-3">
+                                <span>February 22, 2025</span>
+                                <span class="mx-2">•</span>
+                                <span>6 min read</span>
+                            </div>
+                            <h2 class="text-xl font-bold mb-3">UI Design Principles</h2>
+                            <p class="text-gray-400 mb-4">Fundamental principles every developer should know when creating user interfaces.</p>
+                            <a href="#" class="text-accent hover:underline">Read More →</a>
+                        </div>
+                    </article>
+
+                    <!-- Post 5 -->
+                    <article class="bg-gray-800 rounded-lg overflow-hidden hover:shadow-lg transition">
+                        <img src="https://images.pexels.com/photos/4974912/pexels-photo-4974912.jpeg" alt="JavaScript" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-center text-sm text-gray-400 mb-3">
+                                <span>February 5, 2025</span>
+                                <span class="mx-2">•</span>
+                                <span>8 min read</span>
+                            </div>
+                            <h2 class="text-xl font-bold mb-3">Modern JavaScript Patterns</h2>
+                            <p class="text-gray-400 mb-4">Explore contemporary JavaScript patterns that will make your code more elegant.</p>
+                            <a href="#" class="text-accent hover:underline">Read More →</a>
+                        </div>
+                    </article>
+
+                    <!-- Post 6 -->
+                    <article class="bg-gray-800 rounded-lg overflow-hidden hover:shadow-lg transition">
+                        <img src="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg" alt="Career" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-center text-sm text-gray-400 mb-3">
+                                <span>January 18, 2025</span>
+                                <span class="mx-2">•</span>
+                                <span>5 min read</span>
+                            </div>
+                            <h2 class="text-xl font-bold mb-3">Developer Career Growth</h2>
+                            <p class="text-gray-400 mb-4">Strategies for advancing your career as a software developer in today's market.</p>
+                            <a href="#" class="text-accent hover:underline">Read More →</a>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Pagination -->
+                <div class="flex justify-center mt-12">
+                    <nav class="flex items-center space-x-2">
+                        <a href="#" class="px-4 py-2 border border-gray-700 rounded-md hover:bg-gray-800 transition">Previous</a>
+                        <a href="#" class="px-4 py-2 bg-accent text-primary rounded-md font-medium">1</a>
+                        <a href="#" class="px-4 py-2 border border-gray-700 rounded-md hover:bg-gray-800 transition">2</a>
+                        <a href="#" class="px-4 py-2 border border-gray-700 rounded-md hover:bg-gray-800 transition">3</a>
+                        <a href="#" class="px-4 py-2 border border-gray-700 rounded-md hover:bg-gray-800 transition">Next</a>
+                    </nav>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Partial -->
+    <div id="footer-placeholder"></div>
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
