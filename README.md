@@ -1,9 +1,4 @@
 
-Built by https://www.blackbox.ai
-
----
-
-```markdown
 # Dawit's Portfolio Website
 
 ## Project Overview
